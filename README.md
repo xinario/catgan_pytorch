@@ -32,7 +32,12 @@ cd catgan_pytorch
 ```
 
 ### Train
-- Download the cifar10 dataset and put it inside ./datasets/cifar10:
+- Download the cifar10 dataset (.png format from [kaggle](https://www.kaggle.com/c/cifar-10/data))
+- Create a dataset folder to hold the images
+```bash
+mkdir -p ./datasets/cifar10/images
+```
+- Move the extracted images into the newly created folder
 
 - Train a model:
 ```bash
