@@ -323,5 +323,5 @@ with open(os.path.join(opt.results_dir, opt.name, 'log.csv'), 'wb') as log:
 
         # do checkpointing every 20 epochs
         if epoch % 20 == 0:
-            torch.save(netG.state_dict(), '%s/netG_epoch_%d.pth' % (os.path.join(opt.checkpoints_dir,name), epoch))
-            torch.save(netD.state_dict(), '%s/netD_epoch_%d.pth' % (os.path.join(opt.checkpoints_dir,anem), epoch))
+            torch.save(netG.state_dict(), '%s/netG_epoch_%d.pth' % (os.path.join(opt.checkpoints_dir, opt.name), epoch))
+            torch.save(netD.state_dict(), '%s/netD_epoch_%d.pth' % (os.path.join(opt.checkpoints_dir, opt.name), epoch))

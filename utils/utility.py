@@ -51,7 +51,7 @@ def generate_image(epoch, netG, opt):
         fixed_noise_128 = fixed_noise_128.cuda()
     noisev = autograd.Variable(fixed_noise_128, volatile=True)
     samples = netG(noisev)
-    samples = samples.view(-1, 3, 32, 32)
+    samples = samples.view(-1, 3, opt.image_size, opt.image_size)
     samples = samples.mul(0.5).add(0.5)
     samples = samples.cpu().data.numpy()
 
